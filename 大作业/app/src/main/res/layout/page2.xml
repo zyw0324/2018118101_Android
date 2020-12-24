@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffedc2"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="每日账单查询"
+        android:textColor="#000000"
+        android:textSize="20sp" /><!-- 标题文本 -->
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="日期"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+                <Spinner
+                    android:id="@+id/daySpinner"
+                    android:layout_width="45dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/border" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收/支"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/areaSpinner"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="类别"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+                <Spinner
+                    android:id="@+id/batchSpinner"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/border" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="数额"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+                <Spinner
+                    android:id="@+id/categorySpinner"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/border" />
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView><!-- 选择条件 -->
+    <TextView
+        android:id="@+id/controlLineTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffedc2"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:textSize="20sp" /><!-- 结果标题 -->
+
+    <LinearLayout
+        android:id="@+id/resultTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="日期"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="支出"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="收入"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="结余"
+            android:textColor="#000000"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+    <!-- 列表项标题 -->
+
+    <ListView
+        android:id="@+id/controlLineList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+    <!-- 结果列表 -->
+
+</LinearLayout>
