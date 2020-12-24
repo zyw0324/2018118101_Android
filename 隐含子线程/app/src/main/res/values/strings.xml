@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Homework9</string>
+    <string name="download">"下载"</string>
+    <string name="text_view_context">"进度显示"</string>
+</resources>
